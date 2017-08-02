@@ -183,7 +183,7 @@ func TestAsciidocify(t *testing.T) {
 	} {
 		errMsg := fmt.Sprintf("[%d] %s", i, test.s)
 
-		result, err := ns.Markdownify(test.s)
+		result, err := ns.Asciidocify(test.s)
 
 		if b, ok := test.expect.(bool); ok && !b {
 			require.Error(t, err, errMsg)
